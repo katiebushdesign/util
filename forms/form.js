@@ -3,9 +3,8 @@
 \*--------------------------------------------------------*/
 
 import $ from 'jquery'
-import placeholder from '../util/placeholder'
-import { els } from '../ref/els'
-import exists from '../util/exists'
+import placeholder from './placeholder'
+import exists from '../DOMUtils/exists'
 import fastdom from 'fastdom'
 
 // If marketo inserts a style tag directly after the script, remove that element

@@ -1,5 +1,7 @@
 /*--------------------------------------------------------*\
 	Conditionally Load Polyfills
+
+	# Change to import()
 \*--------------------------------------------------------*/
 
 import browser from 'detect-browser'

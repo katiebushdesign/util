@@ -2,7 +2,7 @@
 	Are the elements on a single line?
 \*--------------------------------------------------------*/
 
-import _filter from 'lodash.filter'
+import _ from 'lodash'
 import fastdom from 'fastdom'
 
 const isSingleLine = (container) => {
@@ -21,7 +21,7 @@ const isSingleLine = (container) => {
 	}
 
 	// Filter each elements comparitively to the first, +/- 12 for some wiggle room
-	let filter = _filter(offsets, (el) => {
+	let filter = _.filter(offsets, (el) => {
 		if (el <= offsets[0] + 12 && el >= offsets[0] - 12) return el
 	})
 
