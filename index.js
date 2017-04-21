@@ -8,10 +8,8 @@ import isSingleLine from './DOMUtils/isSingleLine'
 import listener from './DOMUtils/listener'
 import next from './DOMUtils/next'
 import { marketo } from './forms'
-import loadCSS from './load/loadCSS'
-import loadPolyfills from './load/loadPolyfills'
 import loadScript from './load/loadScript'
-import onloadCSS from './load/onloadCSS'
+import moduleLoader from './load/moduleLoader'
 import scrollTo from './scrollUtils/scrollTo'
 
 export {
@@ -20,10 +18,8 @@ export {
 	isSingleLine,
 	listener,
 	next,
-	loadCSS,
-	loadPolyfills,
 	loadScript,
-	onloadCSS,
+	moduleLoader,
 	scrollTo,
 	marketo,
 }
