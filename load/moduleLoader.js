@@ -16,7 +16,7 @@ async function loader(module, name) {
 	}
 }
 
-export default async function modulesLoader() {
+export default function modulesLoader() {
 	let { modulesToLoad } = els
 	_.forIn(modulesToLoad, loader)
 }
