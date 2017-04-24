@@ -12,8 +12,17 @@ const fDOM = fastdom.extend(fastdomPromised)
 // use object fit as an image if it's supported
 // then i can also download by size!!
 
+function animationCallback(block) {
+	let { id, parentNode } = block
+	if (id === 'block--content__1' && parentNode.classList.contains('wrapper--home')) {
+		let speed = document.getElementById('path--speed')
+		let matters = document.getElementById('path--matters')
+		speed.classList.add('path--active')
+		speed.addEventListener('transitionend', () => matters.classList.add('path--active'))
+	}
+}
 
-export default function loadBackgrounds() {
+export default function loadBackgrounds(callback) {
 	let blocksWithBG = els.lazyload.backgroundImages
 
 	_.forEach(blocksWithBG, block => {
@@ -27,6 +36,8 @@ export default function loadBackgrounds() {
 			imageElement.src = src
 			block.appendChild(imageElement)
 			imageElement.classList.add('fadeIn')
+
+			animationCallback(block)
 		})
 
 		image.src = src
