@@ -37,7 +37,9 @@ export default function loadBackgrounds(callback) {
 			block.appendChild(imageElement)
 			imageElement.classList.add('fadeIn')
 
-			animationCallback(block)
+			if (window.matchMedia('(min-width: 40em)')) {
+				animationCallback(block)
+			}
 		})
 
 		image.src = src
