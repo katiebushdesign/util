@@ -3,6 +3,7 @@
 \*--------------------------------------------------------*/
 
 import els from 'els'
+import browser from 'detect-browser'
 import _ from 'lodash'
 import fastdom from 'fastdom'
 import fastdomPromised from 'fastdom/extensions/fastdom-promised'
