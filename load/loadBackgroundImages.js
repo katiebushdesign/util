@@ -14,11 +14,13 @@ const fDOM = fastdom.extend(fastdomPromised)
 
 function animationCallback(block) {
 	let { id, parentNode } = block
-	if (id === 'block--content__1' && parentNode.classList.contains('wrapper--home')) {
-		let speed = document.getElementById('path--speed')
-		let matters = document.getElementById('path--matters')
-		speed.classList.add('path--active')
-		speed.addEventListener('transitionend', () => matters.classList.add('path--active'))
+	if (!browser.name === 'ie' || !browser.version.indexOf('11') > -1) {
+		if (id === 'block--content__1' && parentNode.classList.contains('wrapper--home')) {
+			let speed = document.getElementById('path--speed')
+			let matters = document.getElementById('path--matters')
+			speed.classList.add('path--active')
+			speed.addEventListener('transitionend', () => matters.classList.add('path--active'))
+		}
 	}
 }
 
