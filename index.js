@@ -12,6 +12,7 @@ import loadScript from './load/loadScript'
 import moduleLoader from './load/moduleLoader'
 import loadBackgroundImages from './load/loadBackgroundImages'
 import scrollTo from './scrollUtils/scrollTo'
+import permute from './arrays/permute'
 
 export {
 	closest,
@@ -24,4 +25,5 @@ export {
 	loadBackgroundImages,
 	scrollTo,
 	marketo,
+	permute,
 }
