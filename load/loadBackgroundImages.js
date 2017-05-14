@@ -5,13 +5,10 @@
 import els from 'els'
 import browser from 'detect-browser'
 import _ from 'lodash'
+import { closest } from 'util'
 import fastdom from 'fastdom'
 import fastdomPromised from 'fastdom/extensions/fastdom-promised'
 const fDOM = fastdom.extend(fastdomPromised)
-
-
-// use object fit as an image if it's supported
-// then i can also download by size!!
 
 function animationCallback(block) {
 	let { id, parentNode } = block
@@ -40,7 +37,7 @@ export default function loadBackgrounds(callback) {
 			block.appendChild(imageElement)
 			imageElement.classList.add('fadeIn')
 
-			if (window.matchMedia('(min-width: 40em)')) {
+			if (window.matchMedia('(min-width: 40em)') && block.classList.contains('block') && !!block.querySelector('#bannerTitle')) {
 				animationCallback(block)
 			}
 		})
